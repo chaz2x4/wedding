@@ -1,0 +1,26 @@
+@charset "UTF-8";
+#header a {
+  color: black;
+}
+
+#header #logo, #header #menu {
+  width: 100%;
+}
+
+@media only screen and (min-width: 425px) {
+  #header #logo, #header #menu {
+    width: auto;
+  }
+}
+
+#intro {
+  background-image: url('/images/overlay.png'), url('/images/intro.jpg');
+  background-repeat: repeat, no-repeat;
+  background-position: 0%, 50%;
+  background-attachment: fixed, fixed;
+  background-size: 256px 256px, cover;
+}
+
+.main {
+  padding: 10em 0em;
+}
