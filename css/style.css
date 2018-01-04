@@ -72,6 +72,9 @@
     .story {
         padding: 1em 5em;
     }
+    #canvas {
+      display: block;
+    }
 }
 
 #intro .names span {
@@ -124,7 +127,7 @@
 #canvas {
   margin-top: 3.5em;
   position: absolute;
-  display: block;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
