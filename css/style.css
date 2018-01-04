@@ -14,7 +14,7 @@
 }
 
 #intro {
-  background-image: url('/images/overlay.png'), url('/images/intro.jpg');
+  background-image: url('../images/overlay.png'), url('../images/intro.jpg');
   background-repeat: repeat, no-repeat;
   background-position: 0%, 50%;
   background-attachment: fixed, fixed;
