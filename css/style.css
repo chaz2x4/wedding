@@ -1,47 +1,56 @@
 @charset "UTF-8";
 
 #header {
-  padding: 1em;
+  position: fixed;
+  width: 100%;
+  background: white;
+  opacity: .9;
+}
+
+#header .navbar-expand {
+  justify-content: space-between;
 }
 
 #header a {
   color: black;
 }
 
-#header a span {
-  font-size: 1em;
-}
-
-#header #logo, #header #menu {
-  width: 100%;
-}
-
-@media only screen and (min-width: 425px) {
-  #header a span {
-    font-size: 0.75em;
-  }
-
-  #header #logo, #header #menu {
-    width: auto;
-  }
-
-  #header #menu {
-    position: absolute;
-    right: 0;
-    padding-top: 1em;
-  }
-}
-
 #intro {
   background-image: url('../images/overlay.png'), url('../images/intro.jpg');
   background-repeat: repeat, no-repeat;
-  background-position: 0%, 50%;
+  background-position: 0%, 50% 70%;
   background-attachment: fixed, fixed;
   background-size: 256px 256px, cover;
+  padding: 10em 0em;
+  color: white;
 }
 
-.main {
-  padding: 10em 0em;
+#proposal_story {
+  background-image: url('../images/overlay.png'), url('../images/shirleyheights.jpg');
+  background-repeat: repeat, no-repeat;
+  background-position: 0%, 10% 0%;
+  background-attachment: fixed, fixed;
+  background-size: 256px 256px, cover;
+  color: white;
+}
+
+@media screen and (min-width: 425px) {
+  #proposal_story {
+    padding: 7.5em 5em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    #proposal_story {
+      padding: 10em 15em;
+    }
+    .story {
+        padding: 1em 5em;
+    }
+}
+
+#intro .names span {
+    font-size: 2em;
 }
 
 .monospace {
@@ -50,4 +59,23 @@
 
 .cursive {
   font-family: 'Dancing Script', cursive;
+}
+
+#top_button {
+  position: fixed;
+  right: 1em;
+  bottom: 2em;
+  text-align: center;
+  border-radius: 100%;
+  opacity: .35;
+  padding: 9px 14px;
+}
+
+#top_button:hover {
+  opacity: .85;
+}
+
+.story {
+  padding: 1em;
+  background-color: rgba(0,0,0,0.5);
 }
