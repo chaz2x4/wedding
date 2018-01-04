@@ -13,7 +13,7 @@ const FIREWORK_SPEED = 5;
 // Base length of firework trails.
 const FIREWORK_TRAIL_LENGTH = 3;
 // Determine if target position indicator is enabled.
-const FIREWORK_TARGET_INDICATOR_ENABLED = true;
+const FIREWORK_TARGET_INDICATOR_ENABLED = false;
 
 // Minimum particle brightness.
 const PARTICLE_BRIGHTNESS_MIN = 50;
@@ -111,8 +111,8 @@ function calculateDistance(aX, aY, bX, bY) {
 
 // Track current mouse position within canvas.
 canvas.addEventListener('mousemove', (e) => {
-	mouseX = e.pageX - canvas.offsetLeft
-	mouseY = e.pageY - canvas.offsetTop
+	mouseX = e.x - canvas.offsetLeft;
+	mouseY = e.y - canvas.offsetTop;
 });
 
 // Track when mouse is pressed.
@@ -376,8 +376,9 @@ function launchManualFirework() {
 			// Set end position to current mouse position.
 			let endX = mouseX;
 			let endY = mouseY;
-			// Create new firework and add to collection.
+			// Create new firework and add to collection.);
 			fireworks.push(new Firework(startX, startY, endX, endY));
+
 			// Reset tick counter.
 			ticksSinceFirework = 0;
 		}
