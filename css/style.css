@@ -111,7 +111,14 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
+
+#intro .btn {
+  z-index: 2;
+  position: relative;
+}
+
 
 @media screen and (min-width: 425px) {
   #proposal_story {
