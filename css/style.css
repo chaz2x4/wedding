@@ -5,6 +5,14 @@
   width: 100%;
   background: white;
   opacity: .9;
+  z-index: 10000;
+}
+
+#footer {
+  width: 100%;
+  background: white;
+  opacity: .9;
+  padding: 1.5em;
 }
 
 #header .navbar-expand {
@@ -35,7 +43,12 @@
 }
 
 #countdown_timer {
-  
+  background-image: url('../images/overlay.png'), url('../images/hands.jpg');
+  background-repeat: repeat, no-repeat;
+  background-position: 0%, 0% 50%;
+  background-attachment: fixed, fixed;
+  background-size: 256px 256px, cover;
+  color: white;
 }
 
 @media screen and (min-width: 425px) {
@@ -65,6 +78,14 @@
   font-family: 'Dancing Script', cursive;
 }
 
+.her_writing {
+  font-family: 'Indie Flower', cursive;
+}
+
+.his_writing {
+  font-family: 'Handlee', cursive;
+}
+
 #top_button {
   position: fixed;
   right: 1em;
@@ -79,7 +100,20 @@
   opacity: .85;
 }
 
+#countdown_clock {
+  padding: 7.5em 5em;
+  font-size: 2.5em;
+}
+
+.no_link, .no_link:hover {
+  color: white;
+}
+
 .story {
   padding: 1em;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,.5);
+}
+
+.story h2 {
+  font-size: 1.25em;
 }
