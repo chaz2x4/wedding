@@ -1,6 +1,15 @@
 @charset "UTF-8";
+
+#header {
+  padding: 1em;
+}
+
 #header a {
   color: black;
+}
+
+#header a span {
+  font-size: 1em;
 }
 
 #header #logo, #header #menu {
@@ -8,6 +17,10 @@
 }
 
 @media only screen and (min-width: 425px) {
+  #header a span {
+    font-size: 0.75em;
+  }
+
   #header #logo, #header #menu {
     width: auto;
   }
@@ -15,6 +28,7 @@
   #header #menu {
     position: absolute;
     right: 0;
+    padding-top: 1em;
   }
 }
 
@@ -28,4 +42,12 @@
 
 .main {
   padding: 10em 0em;
+}
+
+.monospace {
+   font-family: 'Source Code Pro', monospace;
+}
+
+.cursive {
+  font-family: 'Dancing Script', cursive;
 }
