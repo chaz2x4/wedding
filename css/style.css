@@ -34,6 +34,10 @@
   color: white;
 }
 
+#countdown_timer {
+  
+}
+
 @media screen and (min-width: 425px) {
   #proposal_story {
     padding: 7.5em 5em;
