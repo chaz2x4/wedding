@@ -49,7 +49,7 @@ const CANVAS_CLEANUP_ALPHA = 0.15;
 const HUE_STEP_INCREASE = 0.5;
 
 // Minimum number of ticks per manual firework launch.
-const TICKS_PER_FIREWORK_MIN = 5;
+const TICKS_PER_FIREWORK_MIN = 20;
 // Minimum number of ticks between each automatic firework launch.
 const TICKS_PER_FIREWORK_AUTOMATED_MIN = 20;
 // Maximum number of ticks between each automatic firework launch.
@@ -341,6 +341,29 @@ function createParticles(x, y) {
 	}
 }
 
+// Launch fireworks automatically.
+function launchAutomatedFirework() {
+	// Determine if ticks since last automated launch is greater than random min/max values.
+	if(ticksSinceFireworkAutomated >= random(TICKS_PER_FIREWORK_AUTOMATED_MIN, TICKS_PER_FIREWORK_AUTOMATED_MAX)) {
+		// Check if mouse is not currently clicked.
+		if(!isMouseDown) {
+			// Set start position to bottom center.
+			let startX = canvas.width / 2;
+			let startY = canvas.height;
+			// Set end position to random position, somewhere in the top half of screen.
+			let endX = random(0, canvas.width);
+			let endY = random(0, canvas.height / 2);
+			// Create new firework and add to collection.
+			fireworks.push(new Firework(startX, startY, endX, endY));
+			// Reset tick counter.
+			ticksSinceFireworkAutomated = 0;
+		}
+	} else {
+		// Increment counter.
+		ticksSinceFireworkAutomated++;
+	}
+}
+
 // Launch fireworks manually, if mouse is pressed.
 function launchManualFirework() {
 	// Check if ticks since last firework launch is less than minimum value.
@@ -400,6 +423,9 @@ function loop() {
 
 	// Update particles.
 	updateParticles();
+
+	// Launch automated fireworks.
+	// launchAutomatedFirework();
 
 	// Launch manual fireworks.
 	launchManualFirework();
