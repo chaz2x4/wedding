@@ -85,21 +85,6 @@
   font-family: 'Handlee', cursive;
 }
 
-#top_button {
-  position: fixed;
-  right: 1em;
-  bottom: 2em;
-  text-align: center;
-  border-radius: 100%;
-  opacity: .35;
-  padding: 0.5625em 0.875em;
-  z-index: 1000;
-}
-
-#top_button:hover {
-  opacity: .85;
-}
-
 .no_link, .no_link:hover {
   color: white;
 }
