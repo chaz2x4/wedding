@@ -114,7 +114,7 @@
   z-index: 1;
 }
 
-#intro .btn {
+#intro .btn, #intro span {
   z-index: 2;
   position: relative;
 }
