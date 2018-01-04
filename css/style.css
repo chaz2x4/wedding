@@ -45,7 +45,7 @@
 #proposal_story {
   background-image: url('../images/overlay.png'), url('../images/shirleyheights.jpg');
   background-repeat: repeat, no-repeat;
-  background-position: 0%, 10% 0%;
+  background-position: 0%, 15% 0%;
   background-attachment: fixed, fixed;
   background-size: 256px 256px, cover;
   color: white;
