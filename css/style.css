@@ -119,6 +119,10 @@
   position: relative;
 }
 
+#rsvp {
+  height: 100vh;
+  padding-top: 7.75em;
+}
 
 @media screen and (min-width: 425px) {
   #proposal_story {
@@ -126,6 +130,9 @@
   }
   #countdown_clock {
     padding: 7.5em 2em;
+  }
+  #rsvp {
+    padding-top: 5.25em;
   }
 }
 
