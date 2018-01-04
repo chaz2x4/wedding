@@ -34,7 +34,7 @@
 }
 
 #how_we_met {
-  background-image: url('../images/overlay.png'), url('../images/battleship.jpg');
+  background-image: url('../images/overlay.png'), url('../images/marble.jpg');
   background-repeat: repeat, no-repeat;
   background-position: 0%, 20% 50%;
   background-attachment: fixed, fixed;
