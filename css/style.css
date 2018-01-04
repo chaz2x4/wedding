@@ -33,6 +33,15 @@
   color: white;
 }
 
+#how_we_met {
+  background-image: url('../images/overlay.png'), url('../images/battleship.jpg');
+  background-repeat: repeat, no-repeat;
+  background-position: 0%, 20% 50%;
+  background-attachment: fixed, fixed;
+  background-size: 256px 256px, cover;
+  color: white;
+}
+
 #proposal_story {
   background-image: url('../images/overlay.png'), url('../images/shirleyheights.jpg');
   background-repeat: repeat, no-repeat;
@@ -125,11 +134,14 @@
   padding-top: 7.75em;
 }
 
+.story-container {
+
+}
 @media screen and (min-width: 425px) {
-  #proposal_story {
+  #countdown_clock {
     padding: 7.5em 2em;
   }
-  #countdown_clock {
+  .story-container {
     padding: 7.5em 2em;
   }
   #rsvp {
@@ -138,7 +150,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    #proposal_story {
+    .story-container {
       padding: 10em 15em;
     }
     .story {
