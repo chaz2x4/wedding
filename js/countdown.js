@@ -11,8 +11,10 @@ var updateCountdown = setInterval(function(){
   var minutes = Math.floor((distance%hour)/minute);
   var seconds = Math.floor((distance%minute)/second);
 
-  document.getElementById("countdown_clock").innerHTML = days + "days" + hours + "hours "
-  + minutes + "minutes " + seconds + "seconds ";
+  document.getElementById("countdown_clock-days").innerHTML = days + " days";
+  document.getElementById("countdown_clock-hours").innerHTML = hours + " hours";
+  document.getElementById("countdown_clock-minutes").innerHTML = minutes + " minutes";
+  document.getElementById("countdown_clock-seconds").innerHTML = seconds + " seconds";
 
   if(distance < 0) {
     document.getElementById("countdown_clock").innerHTML = "WE'RE MARRIED!"
