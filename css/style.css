@@ -11,6 +11,11 @@
   #header #logo, #header #menu {
     width: auto;
   }
+
+  #header #menu {
+    position: absolute;
+    right: 0;
+  }
 }
 
 #intro {
