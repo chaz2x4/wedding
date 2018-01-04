@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="top">
+<body id="top" {% if include.hide_scroll %} style="overflow: hidden;" {% endif %}>
   <header id="header">
     <nav class="navbar navbar-expand flex-column flex-sm-row">
       <a id="logo" class="navbar-brand text-center" href="index.html">

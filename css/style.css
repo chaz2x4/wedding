@@ -24,7 +24,7 @@
 }
 
 #intro {
-  background-image: url('../images/overlay.png'), url('../images/intro.jpg');
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/intro.jpg');
   background-repeat: repeat, no-repeat;
   background-position: 0%, 50% 70%;
   background-attachment: fixed, fixed;
@@ -34,7 +34,7 @@
 }
 
 #how_we_met {
-  background-image: url('../images/overlay.png'), url('../images/marble.jpg');
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/marble.jpg');
   background-repeat: repeat, no-repeat;
   background-position: 0%, 20% 50%;
   background-attachment: fixed, fixed;
@@ -43,7 +43,7 @@
 }
 
 #proposal_story {
-  background-image: url('../images/overlay.png'), url('../images/shirleyheights.jpg');
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/shirleyheights.jpg');
   background-repeat: repeat, no-repeat;
   background-position: 0%, 15% 0%;
   background-attachment: fixed, fixed;
@@ -52,7 +52,7 @@
 }
 
 #countdown_timer {
-  background-image: url('../images/overlay.png'), url('../images/hands.jpg');
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/hands.jpg');
   background-repeat: repeat, no-repeat;
   background-position: 0%, 40% 70%;
   background-attachment: fixed, fixed;
