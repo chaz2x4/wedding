@@ -162,6 +162,10 @@
   #registry, #rsvp {
     padding: 1em 10em;
   }
+  #intro {
+    padding-top: 5em;
+    padding-bottom: 10em;
+  }
   .rsvp_card {
     border-radius: 1em;
   }
@@ -197,6 +201,7 @@
     }
     #intro {
       padding-top: 10em;
+      padding-bottom: 10em;
     }
     #registry, #rsvp {
         margin-top: 5.375em;
