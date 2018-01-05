@@ -13,7 +13,6 @@
 
 #header a {
   color: black;
-  padding-right: 0;
 }
 
 #intro {
@@ -165,9 +164,6 @@
   }
   .rsvp_card {
     border-radius: 1em;
-  }
-  #header a {
-    padding-right: 0.5em;
   }
 }
 
