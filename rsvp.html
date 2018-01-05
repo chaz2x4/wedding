@@ -7,11 +7,11 @@
     if(isValid) {
       form.classList = 'd-none';
       document.getElementById("form_response").classList = 'd-block';
-      var is_attending = form['entry.1932718145'];
-      if(is_attending === 'yes' )//Attending or nah {}
-      document.getElementById("form_response-attending").classList = 'd-block';
-      else
-      document.getElementById("form_response-declined").classList = 'd-block';
+      var is_attending = form['entry.1932718145'].value;
+      if(is_attending === 'Yes' )//Attending or nah {}
+        document.getElementById("form_response-attending").classList = 'd-block';
+      else if(is_attending === 'No')
+        document.getElementById("form_response-declined").classList = 'd-block';
     }
     return isValid;
   };
