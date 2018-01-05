@@ -55,7 +55,7 @@
 }
 
 #countdown_timer {
-  height: 25em;
+  min-height: 32em;
   position: relative;
 }
 
@@ -101,7 +101,7 @@
 
 #countdown_clock {
   position: absolute;
-  top: 15%;
+  top: 25%;
   font-size: 3em;
   color: white;
   cursor: pointer;
@@ -143,10 +143,10 @@
 
 @media screen and (min-width:576px) {
   #countdown_timer {
-    height: 30em;
+    min-height: 40em;
   }
   #countdown_clock {
-    top: 30%;
+    top: 40%;
     padding: 0 1em;
   }
   .story-container {
@@ -181,10 +181,7 @@
       white-space: nowrap;
     }
     #countdown_timer {
-      height: 35em;
-    }
-    #countdown_clock {
-      top: 35%;
+      min-height: 36em;
     }
     .story-container {
       padding: 10em 15em;
