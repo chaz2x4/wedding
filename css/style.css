@@ -13,7 +13,6 @@
 
 #header a {
   color: black;
-  padding-right: 0;
 }
 
 #intro {
@@ -23,7 +22,7 @@
   background-attachment: fixed, fixed;
   background-size: 256px 256px, cover;
   color: white;
-  padding: 10em 0;
+  padding: 3em 0;
 }
 
 #how_we_met {
@@ -166,9 +165,6 @@
   .rsvp_card {
     border-radius: 1em;
   }
-  #header a {
-    padding-right: 0.5em;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -198,6 +194,9 @@
     }
     #rsvp {
       padding: 1.5em 22em;
+    }
+    #intro {
+      padding-top: 10em;
     }
     #registry, #rsvp {
         margin-top: 5.375em;
