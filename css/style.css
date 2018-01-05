@@ -62,7 +62,7 @@
   background-attachment: fixed, fixed;
   background-size: 256px 256px, cover;
   color: white;
-  margin-top: 8.25em;
+  margin-top: 7.925em;
   padding: 0;
 }
 
@@ -128,7 +128,7 @@
   background-attachment: fixed, fixed;
   background-size: 256px 256px, cover;
   background-color: white;
-  margin-top: 8.25em;
+  margin-top: 8.2em;
   padding: 0;
 }
 
@@ -180,6 +180,9 @@
     margin-top: 5.25em;
     padding: 1em 10em;
   }
+  .rsvp_card {
+    border-radius: 1em;
+  }
   #header a {
     padding-right: 0.5em;
   }
@@ -203,8 +206,5 @@
     }
     #rsvp {
       padding: 1.5em 21em;
-    }
-    .rsvp_card {
-      border-radius: 1em;
     }
 }
