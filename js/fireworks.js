@@ -110,22 +110,29 @@ function calculateDistance(aX, aY, bX, bY) {
 // === EVENT LISTENERS ===
 
 // Track current mouse position within canvas.
-canvas.addEventListener('mousemove', (e) => {
+function mouseMoved(e) {
 	mouseX = e.x - canvas.offsetLeft;
 	mouseY = e.y - canvas.offsetTop;
-});
+}
+canvas.addEventListener('mousemove', mouseMoved);
 
 // Track when mouse is pressed.
-canvas.addEventListener('mousedown', (e) => {
-	e.preventDefault()
+function mousePressed(e) {
+	if(e.type === 'mousedown') e.preventDefault();
+	if(e.type === 'touchstart') {
+			mouseX = e.touches[0].clientX;
+			mouseY = e.touches[0].clientY;
+	}
 	isMouseDown = true
-});
+}
+canvas.addEventListener('mousedown', mousePressed);
 
 // Track when mouse is released.
-canvas.addEventListener('mouseup', (e) => {
-	e.preventDefault()
+function mouseLifted(e){
+	if(e.type === 'mouseup') e.preventDefault();
 	isMouseDown = false
-});
+}
+canvas.addEventListener('mouseup', mouseLifted);
 
 // === END EVENT LISTENERS ===
 
@@ -430,20 +437,14 @@ function loop() {
 
 	// Launch manual fireworks.
 	launchManualFirework();
-	let timer_section = document.getElementById("countdown_timer");
-	timer_section.addEventListener('mousedown', (e) => {
-		e.preventDefault()
-		isMouseDown = true
-	});
-	timer_section.addEventListener('mouseup', (e) => {
-		e.preventDefault();
-		isMouseDown = false;
-	})
-	// Track current mouse position within canvas.
-	timer_section.addEventListener('mousemove', (e) => {
-		mouseX = e.x - canvas.offsetLeft;
-		mouseY = e.y - canvas.offsetTop;
-	});
+	let timer_section = document.getElementById('countdown_timer');
+	timer_section.addEventListener('mousedown', mousePressed);
+	timer_section.addEventListener('mouseup', mouseLifted)
+	timer_section.addEventListener('mousemove', mouseMoved);
+	timer_section.addEventListener('touchstart', mousePressed, { passive : true });
+	timer_section.addEventListener('touchend', mouseLifted, { passive : true });
+	timer_section.addEventListener('touchmove', mouseMoved, { passive : true });
+
 }
 
 // Initiate loop after window loads.
