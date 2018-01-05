@@ -1,15 +1,5 @@
 @charset "UTF-8";
 
-#header {
-  position: fixed;
-  width: 100%;
-  background: white;
-  opacity: .9;
-  top: 0;
-  z-index: 10000;
-  white-space: nowrap;
-}
-
 #footer {
   width: 100%;
   background: white;
@@ -62,7 +52,6 @@
   background-attachment: fixed, fixed;
   background-size: 256px 256px, cover;
   color: white;
-  margin-top: 7.925em;
   padding: 0;
 }
 
@@ -128,7 +117,6 @@
   background-attachment: fixed, fixed;
   background-size: 256px 256px, cover;
   background-color: white;
-  margin-top: 8.2em;
   padding: 0;
 }
 
@@ -170,14 +158,9 @@
     width: 16em;
   }
   #input_comment {
-    width: 19em;
+    width: 18em;
   }
-  #registry {
-    margin-top: 5.25em;
-    padding: 1em 10em;
-  }
-  #rsvp {
-    margin-top: 5.25em;
+  #registry, #rsvp {
     padding: 1em 10em;
   }
   .rsvp_card {
@@ -189,6 +172,15 @@
 }
 
 @media screen and (min-width: 992px) {
+    #header {
+      position: fixed;
+      width: 100%;
+      background: white;
+      opacity: .9;
+      top: 0;
+      z-index: 10000;
+      white-space: nowrap;
+    }
     #countdown_timer {
       height: 35em;
     }
@@ -205,6 +197,9 @@
       padding: 1.5em 20em;
     }
     #rsvp {
-      padding: 1.5em 21em;
+      padding: 1.5em 22em;
+    }
+    #registry, #rsvp {
+        margin-top: 5.375em;
     }
 }
