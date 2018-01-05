@@ -1,7 +1,7 @@
 ---
 ---
 {% include header.html title="RSVP" short-title="rsvp" %}
-<script type="text/javascript">
+<script>
   var submit_rsvp = function (e, form) {
     var isValid = form.checkValidity();
     if(isValid) {
@@ -17,7 +17,7 @@
   };
 </script>
 <section id="rsvp">
-  <iframe name="response_frame" width="0" height="0" border="0" style="display:none;"></iframe>
+  <iframe name="response_frame" width="0" height="0" style="display:none;"></iframe>
   <div class="rsvp_card text-center cursive">
     <h1 class="cursive"> RSVP </h1>
     <div id="form_response" class="d-none">
