@@ -1,6 +1,58 @@
 ---
 ---
-{% include header.html title="RSVP" short-title="rsvp" hide_scroll=true %}
+{% include header.html title="RSVP" short-title="rsvp" %}
+<script type="text/javascript">
+  var submit_rsvp = function (e, form) {
+    var isValid = form.checkValidity();
+    if(isValid) {
+      form.classList = 'd-none';
+      document.getElementById("form_response").classList = 'd-block';
+      var is_attending = form['entry.1932718145'];
+      if(is_attending === 'yes' )//Attending or nah {}
+      document.getElementById("form_response-attending").classList = 'd-block';
+      else
+      document.getElementById("form_response-declined").classList = 'd-block';
+    }
+    return isValid;
+  };
+</script>
 <section id="rsvp">
-  <iframe id="rsvp_frame" src="https://docs.google.com/forms/d/e/1FAIpQLSd7lWwmv48U_GfigaBpI-mrQPsXziFYSyqh14zegeRpksNBzQ/viewform?embedded=true" width="100%" height="100%" frameborder="0">Loading...</iframe>
+  <iframe name="response_frame" width="0" height="0" border="0" style="display:none;"></iframe>
+  <div class="rsvp_card text-center cursive">
+    <h1 class="cursive"> RSVP </h1>
+    <div id="form_response" class="d-none">
+      <div id="form_response-attending" class="d-none"> Thank for you RSVPing! See you soon!</div>
+      <div id="form_response-declined" class="d-none"> Sorry you can't make it </div>
+    </div>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd7lWwmv48U_GfigaBpI-mrQPsXziFYSyqh14zegeRpksNBzQ/formResponse?embedded=true" method="POST" onsubmit="return submit_rsvp(event, this)" target="response_frame">
+      <div id="form_items">
+        <div class="form-group">
+          <label for="input_name"> M: </label>
+          <input id="input_name" class="input_underline" type="text" name="entry.1960635043" required>
+        </div>
+        <div class="form-group">
+          <div class="form-check form-check-inline">
+            <input  id="input_attending" class="form-check-input" type="radio" name="entry.1932718145" value="Yes" required>
+            <label class="form-check-label" for="input_attending"> WILL BE THERE! </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="input_not-attending" class="form-check-input" type="radio" name="entry.1932718145" value="No" required>
+            <label class="form-check-label" for="input_not-attending"> CAN'T MAKE IT </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="input_number-attending"> # OF ATTENDEES </label>
+          <input id="input_number-attending" class="input_underline" type="number" name="entry.1496282587" min="1" max="5" step="1" required>
+        </div>
+        <div class="form-group cursive">
+          <label for="input_comment"> I promise to dance if you play: </label><br>
+          <input id="input_comment" class="input_underline" name="entry.1196236140">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-info" type="submit"> RESERVE </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </section>
+{% include footer.html %}
