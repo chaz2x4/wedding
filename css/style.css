@@ -121,12 +121,38 @@
 }
 
 #rsvp {
-  height: 100vh;
-  padding-top: 7.75em;
+  position: relative;
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/dockyard.jpg');
+  background-repeat: repeat, no-repeat;
+  background-position: 0%, 40% 70%;
+  background-attachment: fixed, fixed;
+  background-size: 256px 256px, cover;
+  background-color: white;
+  margin-top: 8.25em;
+  padding: 0;
+}
+
+.input_underline {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+#input_name {
+  width: 11em;
+}
+
+#input_comment {
+  width: 14em;
+}
+
+.rsvp_card {
+  background: white;
+  padding: 1em;
+  opacity: 0.95;
 }
 
 #registry .signature {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 @media screen and (min-width:576px) {
@@ -140,10 +166,17 @@
   .story-container {
     padding: 7.5em 2em;
   }
-  #rsvp {
-    padding-top: 5.25em;
+  #input_name {
+    width: 16em;
+  }
+  #input_comment {
+    width: 19em;
   }
   #registry {
+    margin-top: 5.25em;
+    padding: 1em 10em;
+  }
+  #rsvp {
     margin-top: 5.25em;
     padding: 1em 10em;
   }
@@ -167,5 +200,11 @@
     }
     #registry {
       padding: 1.5em 20em;
+    }
+    #rsvp {
+      padding: 1.5em 21em;
+    }
+    .rsvp_card {
+      border-radius: 1em;
     }
 }
