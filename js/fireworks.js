@@ -430,6 +430,20 @@ function loop() {
 
 	// Launch manual fireworks.
 	launchManualFirework();
+	let timer_section = document.getElementById("countdown_timer");
+	timer_section.addEventListener('mousedown', (e) => {
+		e.preventDefault()
+		isMouseDown = true
+	});
+	timer_section.addEventListener('mouseup', (e) => {
+		e.preventDefault();
+		isMouseDown = false;
+	})
+	// Track current mouse position within canvas.
+	timer_section.addEventListener('mousemove', (e) => {
+		mouseX = e.x - canvas.offsetLeft;
+		mouseY = e.y - canvas.offsetTop;
+	});
 }
 
 // Initiate loop after window loads.
