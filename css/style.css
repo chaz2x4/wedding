@@ -199,6 +199,9 @@
     #rsvp {
       padding: 1.5em 22em;
     }
+    #intro {
+      padding-top: 10em;
+    }
     #registry, #rsvp {
         margin-top: 5.375em;
     }
