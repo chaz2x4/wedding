@@ -180,6 +180,9 @@
     margin-top: 5.25em;
     padding: 1em 10em;
   }
+  .rsvp_card {
+    border-radius: 1em;
+  }
   #header a {
     padding-right: 0.5em;
   }
@@ -203,8 +206,5 @@
     }
     #rsvp {
       padding: 1.5em 21em;
-    }
-    .rsvp_card {
-      border-radius: 1em;
     }
 }
