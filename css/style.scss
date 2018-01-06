@@ -2,6 +2,7 @@
 ---
 
 @charset "UTF-8";
+@import "bootstrap/bootstrap.scss";
 
 #footer {
   width: 100%;
@@ -155,6 +156,20 @@
   height: 100%;
   overflow: auto;
   background-color: #00000040;
+  .close {
+    color: #EFEFEF;
+    position: absolute;
+    top: .15em;
+    right: .35em;
+    font-size: 3em;
+    opacity: 1;
+    text-shadow: none;
+    &:hover, &:focus {
+      color: #EEEEEE;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 }
 
 #photosModal {
@@ -221,6 +236,12 @@
   top: 0;
   bottom: 0;
   margin: auto;
+  &:not([href]):not([tabindex]) {
+    color: #EFEFEF;
+    &:hover {
+      color: #EFEFEF;
+    }
+  }
 }
 
 @keyframes spin {

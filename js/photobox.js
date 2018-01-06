@@ -1,15 +1,27 @@
 var slidenum = 1;
+var photoHolder = document.getElementById('photosHolder');
+var image = document.getElementById('photoObject');
+var modal = document.getElementById('photosModal');
+
+function rmClass(object, string){
+  if(object.classList) {
+    object.classList = object.classList.toString().replace(' ' + string, '');
+  }
+}
+
 function openModal(){
-  var modal = document.getElementById('photosModal');
   modal.classList += ' show';
 }
+
+function closeModal() {
+    rmClass(modal, 'show');
+}
+
 function currentSlide(thumb, w, h){
   var thumbObject = document.getElementById('thumb' + thumb);
   w = w | thumbObject.naturalWidth;
   h = h | thumbObject.naturalHeight;
 
-  var image = document.getElementById('photoObject');
-  var photoHolder = document.getElementById('photosHolder');
   photosHolder.classList += ' is-loading';
 
   image.src = 'images/engagement/' + thumb +'.jpg';
@@ -19,10 +31,10 @@ function currentSlide(thumb, w, h){
       image.classList ='img-fluid-flipped';
     }
     else {
-      photoHolder.classList = photoHolder.classList.toString().replace(' modal-content_vertical', '');
+      rmClass(photoHolder, 'modal-content_vertical')
       image.classList = 'img-fluid';
     }
-    photoHolder.classList = photoHolder.classList.toString().replace(' is-loading', '');
+    rmClass(photoHolder, 'is-loading')
   }
 
 
@@ -39,10 +51,10 @@ function moveSlide(direction, max) {
 var thumbs = document.getElementsByClassName('img-thumbnail');
 for (var i = 0; i < thumbs.length; i++) {
   var thumb = thumbs[i];
-  if(thumb.naturalHeight > 400) {
-    thumb.width = 150;
-  }
-  else {
-    thumb.width = 200;
-  }
+  thumb.width = 225;
 }
+
+window.addEventListener('click', (e) => {
+    if(e.target == modal)
+      closeModal();
+});
