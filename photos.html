@@ -2,34 +2,22 @@
 ---
 {% include header.html title="Photos" short-title="photos" %}
 <section id="photos">
-    <script>
-    function openModal(){
-
-    }
-    function currentSlide(index){
-      console.log(index)
-    }
-  </script>
   <div>
     <h1 class="photo_category text-center">Engagement Photos</h1>
-    <div id="thumbnails">
+    <div id="thumbnails" class="text-center">
       {% assign thumbnails = site.static_files | where: "thumbnail", true %}
       {% for thumbnail in thumbnails %}
-        <img src=".{{ thumbnail.path }}" class="img-thumbnail" onclick="openModal();currentSlide({{ forloop.index }})">
+        <img id="thumb{{ thumbnail.basename }}" src=".{{ thumbnail.path }}" class="img-thumbnail" onclick="openModal();currentSlide('{{ thumbnail.basename }}', this.naturalWidth, this.naturalHeight)">
       {% endfor %}
     </div>
   </div>
-  <script>
-  var thumbs = document.getElementsByClassName('img-thumbnail');
-  for (var i = 0; i < thumbs.length; i++) {
-    var thumb = thumbs[i];
-    if(thumb.naturalHeight > 400) {
-      thumb.width = 150;
-    }
-    else {
-      thumb.width = 200;
-    }
-  }
-  </script>
+  <div id="photosModal" class="modal">
+    <div id="photosHolder" class="modal-content">
+      <img id="photoObject" class="img-fluid">
+      <a class="prev" onclick="moveSlide(-1, '{{ thumbnails.size }}')">&#10094;</a>
+      <a class="next" onclick="moveSlide(1, '{{ thumbnails.size }}')">&#10095;</a>
+    </div>
+  </div>
+  <script src="js/photobox.js"></script>
 </section>
 {% include footer.html %}

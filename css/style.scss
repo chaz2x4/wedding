@@ -51,14 +51,6 @@
   color: white;
 }
 
-#photos {
-  padding: 0;
-
-  #thumbnails {
-    padding: 0 10em;
-    text-align: center;
-  }
-}
 
 #registry {
   background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/leaves.jpg');
@@ -180,6 +172,78 @@
   .rsvp_card {
     border-radius: 1em;
   }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #00000040;
+}
+
+#photosModal {
+  .modal-content {
+    position: relative;
+    margin: auto;
+    max-width: 70%;
+    max-height: 70%;
+    padding: 0;
+    top: 10%;
+
+    &.modal-content_vertical {
+      width: fit-content;
+      height: inherit;
+
+      .prev, .next {
+          padding: 80% 1em;
+      }
+    }
+  }
+  .img-fluid-flipped {
+    max-height: 100%;
+    width: auto;
+  }
+}
+
+#photos {
+  padding: 0;
+
+  #thumbnails {
+    padding: 0 10em;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 40% 1em;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  height: 100%;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
 }
 
 @media screen and (min-width: 992px) {
