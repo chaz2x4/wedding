@@ -64,20 +64,20 @@ window.addEventListener('click', (e) => {
       closeModal();
 });
 
-var lastX;
-photoHolder.addEventListener('touchstart', (e) => {
-  lastX = e.changedTouches[0].clientX;
-});
-photoHolder.addEventListener('touchend', (e) => {
-  var currentX = e.changedTouches[0].clientX;
-  currentX -= lastX;
-  if(currentX > 150) {
-    moveSlide(1)
-  }
-  else if(currentX < -150){
-    moveSlide(-1);
-  }
-});
+// var lastX;
+// photoHolder.addEventListener('touchstart', (e) => {
+//   lastX = e.changedTouches[0].clientX;
+// });
+// photoHolder.addEventListener('touchend', (e) => {
+//   var currentX = e.changedTouches[0].clientX;
+//   currentX -= lastX;
+//   if(currentX > 150) {
+//     moveSlide(1)
+//   }
+//   else if(currentX < -150){
+//     moveSlide(-1);
+//   }
+// });
 
 window.addEventListener('keydown', (e) => {
   var isModalVisible = modal.classList.contains('show');
