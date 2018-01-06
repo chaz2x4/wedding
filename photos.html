@@ -7,7 +7,7 @@
     <div id="thumbnails" class="text-center">
       {% assign thumbnails = site.static_files | where: "thumbnail", true %}
       {% for thumbnail in thumbnails %}
-        <img id="thumb{{ thumbnail.basename }}" src=".{{ thumbnail.path }}" class="img-thumbnail" onclick="openModal();currentSlide('{{ thumbnail.basename }}', this.naturalWidth, this.naturalHeight)">
+        <img id="thumb{{ thumbnail.basename }}" src=".{{ thumbnail.path }}" class="img-thumbnail" onclick="openModal({{ thumbnails.size }});currentSlide('{{ thumbnail.basename }}', this.naturalWidth, this.naturalHeight)">
       {% endfor %}
     </div>
   </div>
@@ -19,8 +19,8 @@
         </div>
       </div>
       <img id="photoObject" class="img-fluid">
-      <a class="prev" onclick="moveSlide(-1, '{{ thumbnails.size }}')">&#10094;</a>
-      <a class="next" onclick="moveSlide(1, '{{ thumbnails.size }}')">&#10095;</a>
+      <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlide(1)">&#10095;</a>
     </div>
   </div>
   <script src="js/photobox.js"></script>
