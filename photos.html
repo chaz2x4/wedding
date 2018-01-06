@@ -1,7 +1,35 @@
 ---
 ---
 {% include header.html title="Photos" short-title="photos" %}
-Engagement Photos
-Our Visits
-<img src="images/thumbnails/1.b64">
+<section id="photos">
+    <script>
+    function openModal(){
+
+    }
+    function currentSlide(index){
+      console.log(index)
+    }
+  </script>
+  <div>
+    <h1 class="photo_category text-center">Engagement Photos</h1>
+    <div id="thumbnails">
+      {% assign thumbnails = site.static_files | where: "thumbnail", true %}
+      {% for thumbnail in thumbnails %}
+        <img src=".{{ thumbnail.path }}" class="img-thumbnail" onclick="openModal();currentSlide({{ forloop.index }})">
+      {% endfor %}
+    </div>
+  </div>
+  <script>
+  var thumbs = document.getElementsByClassName('img-thumbnail');
+  for (var i = 0; i < thumbs.length; i++) {
+    var thumb = thumbs[i];
+    if(thumb.naturalHeight > 400) {
+      thumb.width = 150;
+    }
+    else {
+      thumb.width = 200;
+    }
+  }
+  </script>
+</section>
 {% include footer.html %}

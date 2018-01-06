@@ -24,6 +24,13 @@ function resizeBase64Img() {
           var out = fs.createWriteStream(path.join('images/thumbnails', i+'.jpg'));
           var stream = canvas.createJPEGStream({ bufsize: 4096, quality: 75 });
 
+          fs.writeFile(path.join(image_dir, i+'.jpg'), data, (err) => {
+            if (err) return console.error(err);
+            fs.unlink(path.join(image_dir, file), (err) => {
+              if (err) return console.error(err);
+              console.log('succesfully removed', file)
+            });
+          });
           stream.pipe(out);
         });
       }
