@@ -10,6 +10,7 @@ function currentSlide(thumb, w, h){
 
   var image = document.getElementById('photoObject');
   var photoHolder = document.getElementById('photosHolder');
+  photosHolder.classList += ' is-loading';
 
   image.src = 'images/engagement/' + thumb +'.jpg';
   image.onload = function (){
@@ -18,9 +19,10 @@ function currentSlide(thumb, w, h){
       image.classList ='img-fluid-flipped';
     }
     else {
-      photoHolder.classList = (photoHolder.classList).toString().replace(' modal-content_vertical', '');
+      photoHolder.classList = photoHolder.classList.toString().replace(' modal-content_vertical', '');
       image.classList = 'img-fluid';
     }
+    photoHolder.classList = photoHolder.classList.toString().replace(' is-loading', '');
   }
 
 
