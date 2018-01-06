@@ -15,11 +15,13 @@ function rmClass(object, string){
 
 function openModal(max_thumbs){
   modal.classList += ' show';
+  document.body.style.overflow='hidden';
   max = max_thumbs;
 }
 
 function closeModal() {
     rmClass(modal, 'show');
+    document.body.style.overflow='auto';
 }
 
 function currentSlide(thumb, w, h){
