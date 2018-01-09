@@ -21,17 +21,21 @@ function openModal(max_thumbs){
 
 function closeModal() {
     rmClass(modal, 'show');
+    rmClass(photoHolder, 'modal-content_vertical');
     document.body.style.overflow='auto';
 }
 
 function currentSlide(thumb, w, h){
+  if(thumb < 10) thumb = '0' + Number(thumb);
   var thumbObject = document.getElementById('thumb' + thumb);
   w = w | thumbObject.naturalWidth;
   h = h | thumbObject.naturalHeight;
 
   photosHolder.classList += ' is-loading';
 
-  image.src = 'images/engagement/' + thumb +'.jpg';
+  var dir = thumbObject.src.toString().split('/');
+  var category = dir[dir.length-2];
+  image.src = 'images/' + category + '/' + thumb +'.jpg';
   image.onload = function (){
     if(h > w){
       photoHolder.classList += ' modal-content_vertical';

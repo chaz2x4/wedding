@@ -1,9 +1,10 @@
 # Build settings
 defaults:
-  - scope:
-      path: "images/thumbnails"
+  -
+    scope:
+      path: "images/thumbnails/engagement"
     values:
-      thumbnail: true
+      engagement: true
 sass:
   sass_dir: _scss
   style: compressed

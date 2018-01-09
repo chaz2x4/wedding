@@ -5,9 +5,9 @@
   <div>
     <h1 class="photo_category text-center">Engagement Photos</h1>
     <div id="thumbnails" class="text-center">
-      {% assign thumbnails = site.static_files | where: "thumbnail", true %}
+      {% assign thumbnails = site.static_files | where: "engagement", true %}
       {% for thumbnail in thumbnails %}
-        <img id="thumb{{ thumbnail.basename }}" src=".{{ thumbnail.path }}" class="img-thumbnail" onclick="openModal({{ thumbnails.size }});currentSlide('{{ thumbnail.basename }}', this.naturalWidth, this.naturalHeight)">
+        <img id="thumb{{ thumbnail.basename }}" src=".{{ thumbnail.path }}" class="img-thumbnail" onclick="openModal({{ thumbnails.size }});currentSlide('{{ thumbnail.basename }}', this.naturalWidth, this.naturalHeight, '{{ thumbnail.path }}')">
       {% endfor %}
     </div>
   </div>
