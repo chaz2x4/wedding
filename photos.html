@@ -2,7 +2,7 @@
 ---
 {% include header.html title="Photos" short-title="photos" %}
 <section id="photos">
-  <div>
+  <div class="thumb-container">
     <h1 class="photo_category text-center">Engagement Photos</h1>
     <div id="thumbnails" class="text-center">
       {% assign thumbnails = site.static_files | where: "engagement", true %}

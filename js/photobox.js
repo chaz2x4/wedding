@@ -62,7 +62,7 @@ function moveSlide(direction) {
 var thumbs = document.getElementsByClassName('img-thumbnail');
 for (var i = 0; i < thumbs.length; i++) {
   var thumb = thumbs[i];
-  thumb.width = 225;
+  thumb.width = 300;
 }
 
 window.addEventListener('click', (e) => {
