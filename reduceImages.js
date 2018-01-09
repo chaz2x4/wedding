@@ -66,5 +66,4 @@ function resizeBase64Img(category_name) {
     }
   });
 }
-resizeBase64Img('justfun');
 resizeBase64Img('engagement');
