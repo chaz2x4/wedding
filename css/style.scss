@@ -46,9 +46,9 @@
 #proposal_story {
   background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/marble.jpg');
   background-repeat: repeat, repeat;
-  background-position: 0%, 0%;
+  background-position: 0%, 0% 10%;
   background-attachment: fixed, fixed;
-  background-size: 256px 256px, cover;
+  background-size: 256px 256px, 512px 512px;
   color: white;
 }
 
