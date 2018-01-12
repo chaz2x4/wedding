@@ -12,10 +12,11 @@
           <span class="his_writing">&</span><br>
           <span class="cursive">Haylee</span>
         </h1>
-        <span> on March 2019 </span>
+        <span> on {{ site.wedding_date }}</span>
     </header>
     <footer>
-      <a class="btn btn-primary" href="rsvp"> RSVP Now! </a>
+      <br>
+      <a class="btn btn-primary" href="rsvp"> RSVP Now!</a>
     </footer>
 </section>
 <!-- How We Met -->
@@ -156,6 +157,7 @@
 <section id="countdown_timer" class="d-flex justify-content-center">
   <canvas id="canvas"> </canvas>
   <div id="countdown_clock" class="text-center cursive">
+      <input id="wedding_date" type="hidden" name="wedding_date" value="{{ site.wedding_date }}">
       <span id="countdown_clock-days"></span>
       <span id="countdown_clock-hours"></span>
       <span id="countdown_clock-minutes"></span>

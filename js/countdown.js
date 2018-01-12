@@ -1,4 +1,5 @@
-var countdownDate = new Date("March 16 2019 09:00").getTime();
+var wedding_date = document.getElementById('wedding_date').value;
+var countdownDate = new Date(wedding_date + " 09:00").getTime();
 var updateCountdown = setInterval(function(){
   var now = new Date().getTime();
   var distance = countdownDate-now;
