@@ -19,54 +19,6 @@
   }
 }
 
-#intro {
-  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/intro.jpg');
-  background-repeat: repeat, no-repeat;
-  background-position: 0%, 50% 70%;
-  background-attachment: fixed, fixed;
-  background-size: 256px 256px, cover;
-  color: white;
-  padding: 3em 0;
-
-  .names span {
-      font-size: 2em;
-  }
-}
-
-
-#how_we_met {
-  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/shirleyheights.jpg');
-  background-repeat: repeat, no-repeat;
-  background-position: 0%, 15% 0%;
-  background-attachment: fixed, fixed;
-  background-size: 256px 256px, cover;
-  color: white;
-}
-
-#proposal_story {
-  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/marble.jpg');
-  background-repeat: repeat, repeat;
-  background-position: 0%, 0% 10%;
-  background-attachment: fixed, fixed;
-  background-size: 256px 256px, 512px 512px;
-  color: white;
-}
-
-
-#registry {
-  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/leaves.jpg');
-  background-repeat: repeat, no-repeat;
-  background-position: 0%, 40% 70%;
-  background-attachment: fixed, fixed;
-  background-size: 256px 256px, cover;
-  color: white;
-  padding: 0;
-
-  .signature {
-    font-size: 1.5em;
-  }
-}
-
 #countdown_timer {
   min-height: 32em;
   position: relative;
@@ -94,15 +46,57 @@
   font-size: 1.25em;
 }
 
+.parallax-container {
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-size: 256px 256px, cover;
+  min-height: 100%;
+  color: white;
+}
+
+#intro {
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/intro.jpg');
+  background-position: 0%, 50% 70%;
+  padding: 3em 0;
+
+  .names span {
+      font-size: 2em;
+  }
+}
+
+#how_we_met {
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/shirleyheights.jpg');
+  background-position: 0%, 15% 0%;
+}
+
+#proposal_story {
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/marble.jpg');
+  background-repeat: repeat, repeat;
+  background-position: 0%, 0% 10%;
+  background-size: 256px 256px, 512px 512px;
+}
+
+#registry {
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/leaves.jpg');
+  background-position: 0%, 40% 70%;
+
+  .signature {
+    font-size: 1.5em;
+  }
+}
+
 #canvas {
   position: relative;
   background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/hands.jpg');
-  background-repeat: repeat, no-repeat;
   background-position: 0%, 40% 70%;
-  background-attachment: fixed, fixed;
-  background-size: 256px 256px, cover;
   width: 100%;
   height: 100%;
+}
+
+#rsvp {
+  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/dockyard.jpg');
+  background-position: 0%, 40% 70%;
+  color: black;
 }
 
 #countdown_clock {
@@ -111,17 +105,6 @@
   font-size: 3em;
   color: white;
   cursor: pointer;
-}
-
-#rsvp {
-  position: relative;
-  background-image: url('../images/includes/overlay.png'), url('../images/backgrounds/dockyard.jpg');
-  background-repeat: repeat, no-repeat;
-  background-position: 0%, 40% 70%;
-  background-attachment: fixed, fixed;
-  background-size: 256px 256px, cover;
-  background-color: white;
-  padding: 0;
 }
 
 .input_underline {
